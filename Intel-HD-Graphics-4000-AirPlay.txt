@@ -1,0 +1,26 @@
+# Intel HD Graphics 4000 AirPlay DSDT Patch
+# HD4000-AirPlay.txt
+# Gigabyte GA-Z77X-UD5H DSDT Patch Repo - http://git.io/vIatr
+#
+# Enables graphics acceleration for Intel HD Graphics 4000
+# Requires Integrated Graphics set to Enabled and VRAM Size set to 64MB in UEFI; designed for use with Intel HD Graphics 4000 for AirPlay Mirroring and a discrete GPU
+#
+# Designed for use with Gigabyte Z77 motherboards; may work on other motherboard with edits
+# Apply the GA-Z77X-UD5H Patch v2 before using this and look at the Graphics README.
+#
+# Special thanks to Piker-Alpha, RampageDev & toleda for their original edits; this would not have been possible if not for their work.
+
+# 1. Enable graphics acceleration for Intel HD Graphics 4000 AirPlay Mirroring
+
+## Add device properties to IGPU device for Intel HD Graphics 4000 AirPlay Mirroring graphics acceleration
+# Note: Hides the IGPU and disables its outputs (same as iMac); Quick Sync remains available for AirPlay Mirroring (use iMac13,X SMBIOS)
+into method label _DSM parent_label IGPU remove_entry;
+into device label IGPU insert begin
+Method (_DSM, 4, NotSerialized)\n
+{\n
+	If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }\n
+	Return (Package () {\n
+		"AAPL,ig-platform-id", Buffer() { 0x07, 0x00, 0x62, 0x01 }\n
+	})\n
+}\n
+end;
