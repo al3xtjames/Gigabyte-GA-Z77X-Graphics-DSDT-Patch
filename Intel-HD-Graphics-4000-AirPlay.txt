@@ -1,6 +1,6 @@
-# Intel HD Graphics 4000 AirPlay DSDT Patch
-# HD4000-AirPlay.txt
-# Gigabyte GA-Z77X-UD5H DSDT Patch Repo - http://git.io/vIatr
+# Intel HD Graphics 4000 (AirPlay) DSDT Patch
+# Intel-HD-Graphics-4000-AirPlay.txt
+# Gigabyte GA-Z77X Graphics DSDT Patch Repo - http://git.io/vLURb
 #
 # Enables graphics acceleration for Intel HD Graphics 4000
 # Requires Integrated Graphics set to Enabled and VRAM Size set to 64MB in UEFI; designed for use with Intel HD Graphics 4000 for AirPlay Mirroring and a discrete GPU
