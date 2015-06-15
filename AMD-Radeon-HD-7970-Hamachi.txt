@@ -1,6 +1,6 @@
 # AMD Radeon HD 7970 (Hamachi) DSDT Patch
-# Graphics/AMD-Radeon-HD-7970-Hamachi.txt
-# Gigabyte GA-Z77X-UD5H DSDT Patch Repo - http://git.io/vIatr
+# AMD-Radeon-HD-7970-Hamachi.txt
+# Gigabyte GA-Z77X Graphics DSDT Patch Repo - http://git.io/vLURb
 #
 # Enables graphics acceleration for AMD Radeon HD 7970 and AirPlay Mirroring using Intel HD Graphics 4000
 # Requires Init Display First set to PEG (PCIe Graphics) and Integrated Graphics set to Enabled in UEFI
