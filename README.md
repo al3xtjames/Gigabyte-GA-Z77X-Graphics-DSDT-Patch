@@ -59,4 +59,6 @@ We must patch the AMD7000Controller kext and replace the Hamachi framebuffer wit
 ### NVIDIA Discrete Graphics
 In most cases, you will not need to patch your DSDT for NVIDIA GPUs if you are using [the NVIDIA Web Drivers](hhttp://www.insanelymac.com/forum/topic/301416-nvidia-web-driver-updates-for-yosemite/). Make sure that you use the correct version not just for your version of OS X, but for your specific build of OS X. Note that if you are not using a MacPro SMBIOS, you will need to modify the installer package (instructions are available [on RampageDev's site](http://www.rampagedev.com/?page_id=276&page=3)).
 
+If you are using a newer NVIDIA GPU (900 series), you will have to use the nv_disable=1 flag on your first boot as the default OS X driver hasn't been updated yet for Maxwell GPUs. Once you install the NVIDIA Web Drivers, you will no longer need to use the nv_disable=1 flag.
+
 Note that if you are using a Fermi GPU, you will most likely encounter channel exceptions in recent versions of OS X, leading to the dreaded Fermi freeze. To fix this, you can you use [FreezeFix](http://www.insanelymac.com/forum/topic/291300-fermi-freeze-investigation/) by dan542. Make sure you add it as a login item in order to prevent channel exceptions and freezing.
