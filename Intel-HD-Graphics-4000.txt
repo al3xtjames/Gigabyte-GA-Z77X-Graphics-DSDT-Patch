@@ -1,6 +1,6 @@
 # Intel HD Graphics 4000 DSDT Patch
-# Graphics/Intel-HD-Graphics-4000.txt
-# Gigabyte GA-Z77X-UD5H DSDT Patch Repo - http://git.io/vIatr
+# Intel-HD-Graphics-4000.txt
+# Gigabyte GA-Z77X Graphics DSDT Patch Repo - http://git.io/vLURb
 #
 # Enables graphics acceleration for Intel HD Graphics 4000
 # Requires Integrated Graphics set to Enabled and VRAM Size set to 64MB in UEFI; designed for use with Intel HD Graphics 4000 only (no discrete graphics)
