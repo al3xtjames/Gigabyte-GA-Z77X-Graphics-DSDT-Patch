@@ -9,9 +9,13 @@ These patches can be applied to a cleanly-extracted native DSDT from the Gigabyt
 If you want to use both Intel HD Graphics 4000 and a discrete card, you must set IGFX as Display Init (default GPU) in the BIOS, and connect your primary monitor to the IGPU. Apply the Intel HD Graphics 4000 patch first, then the patch for your discrete card (make sure you edit all instances of `onboard-1` to `onboard-2` in the discrete card's patch).
 
 ### Intel Integrated Graphics
-If you used one of the GA-Z77X post installation scripts in one of the repos, your DSDT was automatically patched with the right DSDT patch for Intel integrated graphics. If you want to change the patch used (e.g. you are using a discrete GPU, but also want to use the integrated GPU for other displays), or manually applied the DSDT patches, you can apply one of the patches located here.
+If you used one of the GA-Z77X post installation scripts in one of the repos, your DSDT was automatically patched with the right DSDT patch for Intel integrated graphics.
+
+If you want to change the patch used (e.g. you are using a discrete GPU, but also want to use the integrated GPU for other displays), or manually applied the DSDT patches, you can apply one of the patches located here.
 #### AirPlay Mirroring
-The AirPlay mirroring DSDT patch for Intel HD Graphics 4000 uses an ig-platform-id value that disables all video outputs of the integrated GPU, but keeps it active for other activites such as QuickSync. This is the same method real iMacs use to enable AirPlay mirroring while "disabling" (it is simply hidden in System Information and has all outputs disabled) the integrated GPU. If you want to use both Intel HD Graphics 4000 and a discrete card (not for AirPlay mirrorring), you must set IGFX as Display Init (default GPU) in the BIOS, and connect your primary monitor to the IGPU. Apply the Intel HD Graphics 4000 patch first, then the patch for your discrete card (make sure you edit all instances of `onboard-1` to `onboard-2` in the discrete card's patch).
+The AirPlay mirroring DSDT patch for Intel HD Graphics 4000 uses an ig-platform-id value that disables all video outputs of the integrated GPU, but keeps it active for other activites such as QuickSync. This is the same method real iMacs use to enable AirPlay mirroring while "disabling" (it is simply hidden in System Information and has all outputs disabled) the integrated GPU.
+
+If you want to use both Intel HD Graphics 4000  (not just for AirPlay mirroring and with actual display outputs) and a discrete card, apply the Intel HD Graphics 4000 patch first, then the patch for your discrete card (make sure you edit all instances of `onboard-1` to `onboard-2` in the Intel HD Graphics 4000 patch).
 
 ### AMD Discrete Graphics
 Most AMD GPUs work in OS X as long as the proper framebuffer is injected (through DSDT, Clover, etc.). The AMD Radeon HD 7970 (Hamachi) DSDT patch is an example of a patch that injects the framebuffer in the DSDT. In some cases, non-reference cards will need a patched framebuffer to get properly working display outputs.
