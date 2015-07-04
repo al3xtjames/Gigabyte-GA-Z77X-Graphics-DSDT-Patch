@@ -6,7 +6,7 @@
 # Requires Integrated Graphics set to Enabled and VRAM Size set to 64MB in UEFI; designed for use with Intel HD Graphics 4000 for AirPlay Mirroring and a discrete GPU
 #
 # Designed for use with Gigabyte Z77 motherboards; may work on other motherboard with edits
-# Apply the GA-Z77X-UD5H Patch v2 before using this and look at the Graphics README.
+# Apply the proper DSDT patch for your motherboard before using this and look at the Graphics README.
 #
 # Special thanks to Piker-Alpha, RampageDev & toleda for their original edits; this would not have been possible if not for their work.
 
